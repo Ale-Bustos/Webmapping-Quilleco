@@ -37,6 +37,15 @@ const JJVVLayer: React.FC = () => {
                 popupContent += '<b>Vigencia de la directiva:</b> ' + feature.properties.Vigencia_de_la_directiva + '<br>';
             }
             layer.bindPopup(popupContent);
+
+            // Añadir la etiqueta
+            if (feature.properties.Name) {
+                layer.bindTooltip(feature.properties.Name, {
+                    permanent: true,
+                    direction: 'top',
+                    className: 'jjvv-tooltip'
+                }).openTooltip();
+            }
         }
     };
 
@@ -46,7 +55,7 @@ const JJVVLayer: React.FC = () => {
             pointToLayer={(feature, latlng) => {
                 const jjvvIcon = L.icon({
                     iconUrl: 'icons/Icon_jjvv.png',
-                    iconSize: [30, 30],
+                    iconSize: [40, 40],
                     iconAnchor: [15, 30],
                     popupAnchor: [0, -30]
                 });

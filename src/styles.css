@@ -16,12 +16,27 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     font-family: 'Arial', sans-serif;
 }
+
 .label-tooltip {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 2px 5px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
-    color: #333;
+    color: #117ac0;
     text-align: center;
+}
+
+.jjvv-tooltip {
+    background-color: #fff;
+    color: #000;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 1px;
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+}
+
+.water-label {
+    font: italic 12px Calibri, sans-serif;
+    fill: #0066ff;
+    stroke: #ffffff;
+    stroke-width: 1px;
 }
